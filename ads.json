@@ -13,6 +13,9 @@
             "smtp"
         ],
         "noDirectLaunch": [],
-        "configs": {}
+        "configs": {
+            "org.gluu.agama.smtp.main": {}
+        },
+        "name": "agama-smtp"
     }
 }
