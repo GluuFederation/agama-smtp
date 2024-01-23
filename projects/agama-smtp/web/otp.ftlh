@@ -59,7 +59,7 @@
 			<label for="code" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
 			  Enter OTP
 			</label>
-			<input type="text" id="passcode" name="passcode" autofocus="" pattern="[0-9]+" placeholder="******" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
+			<input type="text" id="passcode" name="passcode" autofocus="" pattern="[0-9]+" placeholder="000000" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
 		  </div>
 		  <div class="space-y-9">
 			<div class="text-sm flex justify-between items-center">
