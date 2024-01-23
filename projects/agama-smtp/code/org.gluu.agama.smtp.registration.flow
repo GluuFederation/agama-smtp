@@ -1,7 +1,6 @@
 // This flow provisions a new user account in the server
 Flow org.gluu.agama.smtp.registration
      Basepath ""
-     Configs conf
      Inputs profile extUid
 // Assign the email obtain from input profile to a variable
 origEmail = profile.email
@@ -11,8 +10,6 @@ When origEmail is null
      obj = { success: false, error: "No e-mail found in input profile" }
      // Finish for no e-mail found in input profile 
      Finish obj
-// append recaptcha settings
-profile.recaptcha = conf.recaptcha
 // Open registration page on UI
 data = RRF "profile.ftlh" profile
 // Variable assignment 
