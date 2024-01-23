@@ -18,7 +18,8 @@
                 "minCredsRequired": 2,
                 "captureLocation": true
             },
-            "org.gluu.agama.smtp.emailVerification": {}
+            "org.gluu.agama.smtp.emailVerification": {},
+            "org.gluu.agama.smtp.registration": {}
         },
         "name": "agama-smtp"
     }
