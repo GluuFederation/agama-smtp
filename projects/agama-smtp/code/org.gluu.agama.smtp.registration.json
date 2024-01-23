@@ -658,7 +658,7 @@
 					"comment": "This flow provisions a new user account in the server",
 					"isTopLevelFlow": false,
 					"basepath": "",
-					"configParams": "{\n            \"recaptcha\": {\n                \"enabled\": false,\n                \"site_key\": \"SITE KEY (if enabled was set to true), see deployment instructions\"\n            }\n        }",
+					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "profile extUid",
@@ -923,8 +923,8 @@
 		}
 	],
 	"viewport": {
-		"x": 519,
-		"y": 212,
+		"x": 50,
+		"y": 331,
 		"zoom": 1
 	}
 }
