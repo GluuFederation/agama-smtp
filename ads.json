@@ -23,7 +23,8 @@
                     "enabled": false,
                     "site_key": "SITE KEY (if enabled was set to true), see deployment instructions"
                 }
-            }
+            },
+            "org.gluu.agama.smtp.emailVerification": {}
         },
         "name": "agama-smtp"
     }
