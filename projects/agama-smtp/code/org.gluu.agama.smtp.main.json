@@ -415,13 +415,13 @@
 					"hasComment": true,
 					"comment": "Finish the flow successfully",
 					"flowfilename": "",
-					"returnVariable": "{ userId: \"as9233Qz\", uid: uid}",
+					"returnVariable": "{ userId: uid, uid: uid}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 3284,
@@ -1243,7 +1243,7 @@
 				"x": 30,
 				"y": 30
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 30,
@@ -1738,8 +1738,8 @@
 		}
 	],
 	"viewport": {
-		"x": 8.399617922442161,
-		"y": 147.51860510759934,
-		"zoom": 1.0000000000000002
+		"x": -2316,
+		"y": -616,
+		"zoom": 1
 	}
 }
