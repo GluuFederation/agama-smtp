@@ -17,7 +17,8 @@
             "org.gluu.agama.smtp.main": {
                 "minCredsRequired": 2,
                 "captureLocation": true
-            }
+            },
+            "org.gluu.agama.smtp.emailVerification": {}
         },
         "name": "agama-smtp"
     }
