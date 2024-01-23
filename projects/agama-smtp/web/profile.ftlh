@@ -11,13 +11,14 @@
 	
 	
 	
-  
-  
 	[#assign captcha=(recaptcha.enabled!false)]
 	[#if captcha]
 		    
 			
 	[/#if]
+  
+  
+	
 	<div class="md:h-screen bg-white relative flex flex-col justify-center items-center">
 	  <div class="md:border md:border-gray-300 bg-white md:shadow-lg shadow-none rounded p-10 align-middle">
 		<div class="flex flex-col items-center space-y-3">
@@ -85,6 +86,8 @@
 		</form>
 	  </div>
 	</div>
+  
+  
   
   
   
@@ -167,7 +170,21 @@
 					//Calling clip explicitly won't trigger the form submit... weird :-/
 					setTimeout(doSubmit, 100)
 				}
-			</script><script>
+			</script><script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script><script>
+	var robot = true
+	function doSubmit() {
+	  if (!robot) {
+		document.forms[0].requestSubmit()
+	  }
+	}
+	//Apparently this function only gets invoked just once
+	function onSubmit(token) {
+	  console.log("Captcha passed")
+	  robot = false
+	  //Calling clip explicitly won't trigger the form submit... weird :-/
+	  setTimeout(doSubmit, 100)
+	}
+  </script><script>
 	var robot = true
 	function doSubmit() {
 	  if (!robot) {
