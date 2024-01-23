@@ -12,14 +12,21 @@
         "tags": [
             "smtp"
         ],
-        "noDirectLaunch": [],
+        "noDirectLaunch": [
+            "org.gluu.agama.smtp.registration"
+        ],
         "configs": {
             "org.gluu.agama.smtp.main": {
                 "minCredsRequired": 2,
                 "captureLocation": true
             },
             "org.gluu.agama.smtp.emailVerification": {},
-            "org.gluu.agama.smtp.registration": {}
+            "org.gluu.agama.smtp.registration": {
+                "recaptcha": {
+                    "enabled": false,
+                    "site_key": "SITE KEY (if enabled was set to true), see deployment instructions"
+                }
+            }
         },
         "name": "agama-smtp"
     }
