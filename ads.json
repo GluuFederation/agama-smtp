@@ -14,7 +14,10 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "org.gluu.agama.smtp.main": {}
+            "org.gluu.agama.smtp.main": {
+                "minCredsRequired": 2,
+                "captureLocation": true
+            }
         },
         "name": "agama-smtp"
     }
