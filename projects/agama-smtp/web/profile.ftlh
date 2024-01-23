@@ -26,7 +26,7 @@
 		  <p class="leading-normal">Please complete your profile data
 		  </p>
 		</div>
-		<form method="post" class="my-8">
+		<form method="post" class="my-8" enctype="application/x-www-form-urlencoded">
 		  <div class="grid grid-cols-2 gap-2">
 		  </div>
 		  <div id="iyplr">
@@ -83,7 +83,6 @@
 		</form>
 	  </div>
 	</div>
-  
   
   
   
@@ -152,19 +151,17 @@
   </style>
 <script>
 	var robot = true
-        
-        function doSubmit() {            
-            if (!robot) {
-                document.forms[0].requestSubmit()
-            }
-        }
-
-        //Apparently this function only gets invoked just once
-        function onSubmit(token) {
-            console.log("Captcha passed")
-            robot = false
-            //Calling clip explicitly won't trigger the form submit... weird :-/
-            setTimeout(doSubmit, 100)
-        }
+	function doSubmit() {
+	  if (!robot) {
+		document.forms[0].requestSubmit()
+	  }
+	}
+	//Apparently this function only gets invoked just once
+	function onSubmit(token) {
+	  console.log("Captcha passed")
+	  robot = false
+	  //Calling clip explicitly won't trigger the form submit... weird :-/
+	  setTimeout(doSubmit, 100)
+	}
   </script>
 </html>
