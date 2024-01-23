@@ -29,22 +29,22 @@
 			[/#if]
 		  </p>
 		  [#if resent!false]
-		  	We sent you a message again.
+		  We sent you a message again.
 		  [#else]
-			[#if !exists]
-			<div class="inline-flex items-center justify-center w-full">
-			  <hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
-			  <span class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
-				Before creating an account for you we need to verify your e-mail address.
-			  </span>
-			</div>
-			<div class="inline-flex items-center justify-center w-full">
-			  <hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
-			  <span class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
-				Check your inbox - you'll get a message shortly.
-			  </span>
-			</div>
-			[/#if]
+		  [#if !exists]
+		  <div class="inline-flex items-center justify-center w-full">
+			<hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
+			<span class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
+			  Before creating an account for you we need to verify your e-mail address.
+			</span>
+		  </div>
+		  <div class="inline-flex items-center justify-center w-full">
+			<hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
+			<span class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
+			  Check your inbox - you'll get a message shortly.
+			</span>
+		  </div>
+		  [/#if]
 		  [/#if]
 		</div>
 		[#if !(matches!true)]
@@ -75,21 +75,7 @@
 	  </div>
 	</div>
   
-  
 </body>
 
-<script>
-	window.onload = function () {
-	  var form = document.querySelector("form");
-	  form.onsubmit = handleFormValidation;
-	};
-	function handleFormValidation() {
-	  var code = document.getElementById('code').value
-	  if (code === '') {
-		alert('Code is required')
-		return false
-	  }
-	  return true
-	}
-  </script>
+
 </html>
