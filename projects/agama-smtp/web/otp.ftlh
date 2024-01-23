@@ -51,7 +51,7 @@
 		<p align="center" class="fs-6 text-danger mb-4">Wrong code entered!
 		</p>
 		<!--#if-->
-		<form method="post" class="my-8">
+		<form method="post" class="my-8" enctype="application/x-www-form-urlencoded">
 		  <input type="hidden" name="location" id="location" value="">
 		  <input type="hidden" name="device" id="device" value="">
 		  <input type="hidden" name="zone" id="zone" value="">
