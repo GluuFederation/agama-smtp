@@ -19,7 +19,7 @@
 		  <div class="flex">
 			<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png">
 		  </div>
-		  <span class="text-2xl font-semi-bold leading-normal">Enter OTP sent to your Email</span>
+		  <span class="text-2xl font-semi-bold leading-normal">OTP Verification</span>
 		  [#assign exists = (accountExists!false)]
 		  <p class="fs-4 mb-5">
 			[#if exists]
@@ -36,13 +36,7 @@
 		  <div class="inline-flex items-center justify-center w-full">
 			<hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
 			<span class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
-			  Before creating an account for you <br>we need to verify your e-mail address.
-			</span>
-		  </div>
-		  <div class="inline-flex items-center justify-center w-full">
-			<hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
-			<span class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
-			  Check your inbox - you'll get a message shortly.
+			  Please submit the OTP sent to your Email address. Check your inbox - you'll get a message shortly.
 			</span>
 		  </div>
 		  [/#if]
