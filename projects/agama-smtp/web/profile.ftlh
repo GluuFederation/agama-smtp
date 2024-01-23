@@ -13,7 +13,7 @@
 	
   
   
-	[#assign captcha=(recaptcha.enabled!false)]
+	
 	<div class="md:h-screen bg-white relative flex flex-col justify-center items-center">
 	  <div class="md:border md:border-gray-300 bg-white md:shadow-lg shadow-none rounded p-10 align-middle">
 		<div class="flex flex-col items-center space-y-3">
@@ -25,9 +25,6 @@
 		  </p>
 		</div>
 		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
-		  [#if captcha]
-		  <input type="hidden" name="captcha" id="captcha" value="${recaptcha.enable}">
-		  [/#if]
 		  <div class="grid grid-cols-2 gap-2">
 		  </div>
 		  <div id="iyplr">
@@ -76,7 +73,7 @@
 			  </div>
 			</div>
 			<div class="text-sm flex justify-center items-center">
-			  <button type="submit" data-sitekey="${recaptcha.site_key}" data-callback="onSubmit" class="py-3 px-8 rounded text-white btn bg-green-500 hover:bg-green-600">
+			  <button type="submit" data-callback="onSubmit" class="py-3 px-8 rounded text-white btn bg-green-500 hover:bg-green-600">
 				Submit
 			  </button>
 			</div>
@@ -84,11 +81,6 @@
 		</form>
 	  </div>
 	</div>
-  
-  
-  
-  
-  
   
   
   
@@ -156,50 +148,6 @@
 	}
   </style>
 <script>
-  </script><script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script><script>
-	var robot = true
-	if(document.getElementById("captcha").value == true) {
-	  function doSubmit() {
-		if (!robot) {
-		  document.forms[0].requestSubmit()
-		}
-	  }
-	  //Apparently this function only gets invoked just once
-	  function onSubmit(token) {
-		console.log("Captcha passed")
-		robot = false
-		//Calling clip explicitly won't trigger the form submit... weird :-/
-		setTimeout(doSubmit, 100)
-	  }
-	}
-	var robot = true
-	function doSubmit() {
-	  if (!robot) {
-		document.forms[0].requestSubmit()
-	  }
-	}
-	//Apparently this function only gets invoked just once
-	function onSubmit(token) {
-	  console.log("Captcha passed")
-	  robot = false
-	  //Calling clip explicitly won't trigger the form submit... weird :-/
-	  setTimeout(doSubmit, 100)
-	}
-  </script><script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script><script>
-	var robot = true
-	function doSubmit() {
-	  if (!robot) {
-		document.forms[0].requestSubmit()
-	  }
-	}
-	//Apparently this function only gets invoked just once
-	function onSubmit(token) {
-	  console.log("Captcha passed")
-	  robot = false
-	  //Calling clip explicitly won't trigger the form submit... weird :-/
-	  setTimeout(doSubmit, 100)
-	}
-  </script><script>
 	var robot = true
 	function doSubmit() {
 	  if (!robot) {
