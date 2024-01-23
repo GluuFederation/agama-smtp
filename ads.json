@@ -12,7 +12,9 @@
         "tags": [
             "smtp"
         ],
-        "noDirectLaunch": [],
+        "noDirectLaunch": [
+            "org.gluu.agama.smtp.emailVerification"
+        ],
         "configs": {
             "org.gluu.agama.smtp.main": {
                 "minCredsRequired": 2,
