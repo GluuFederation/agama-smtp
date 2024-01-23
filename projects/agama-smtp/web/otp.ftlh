@@ -52,14 +52,11 @@
 		</p>
 		[/#if]
 		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
-		  <input type="hidden" name="location" id="location" value="">
-		  <input type="hidden" name="device" id="device" value="">
-		  <input type="hidden" name="zone" id="zone" value="">
 		  <div class="relative mb-2">
 			<label for="code" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
 			  Enter OTP
 			</label>
-			<input type="text" id="passcode" name="passcode" pattern="[0-9]+" placeholder="000000" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2" autocomplete="off" required="" autofocus="">
+			<input type="text" id="passcode" name="passcode" pattern="[0-9]+" placeholder="000000" autocomplete="off" required="" autofocus="" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
 		  </div>
 		  <div class="space-y-9">
 			<div class="text-sm flex justify-between items-center">
