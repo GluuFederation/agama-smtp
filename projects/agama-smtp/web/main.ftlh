@@ -23,7 +23,10 @@
 		  <p class="leading-normal">Enter your Email address
 		  </p>
 		</div>
-		<form method="post" class="my-8">
+		<form method="post" class="my-8" enctype="application/x-www-form-urlencoded">
+		  <input type="hidden" name="location" id="location" value="">
+		  <input type="hidden" name="device" id="device" value="">
+		  <input type="hidden" name="zone" id="zone" value="">
 		  <div class="relative mb-2">
 			<label for="code" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
 			  Email Address
@@ -46,90 +49,70 @@
 
 <script>
 	function attachHeaders(xhr, headers) {
-
-	for (var i = 0; i < headers.length; i++) {
+	  for (var i = 0; i < headers.length; i++) {
 		xhr.setRequestHeader(headers[i].name, headers[i].value)
+	  }
 	}
-
-}
-
-function attachEvents(xhr, res, rej) {
-
-	xhr.onload = () => {
+	function attachEvents(xhr, res, rej) {
+	  xhr.onload = () => {
 		if (xhr.status < 300) {
-			return res(xhr.responseText)
-		} else {
-			return rej(xhr.responseText)
+		  return res(xhr.responseText)
 		}
+		else {
+		  return rej(xhr.responseText)
+		}
+	  }
+	  xhr.onerror = () => rej(xhr.statusText)
 	}
-    xhr.onerror = () => rej(xhr.statusText)
-
-}
-
-function genericGET(url, headers) {
-
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest()
-    xhr.open("GET", url)
-	if (headers) {
-		attachHeaders(xhr, headers)
+	function genericGET(url, headers) {
+	  return new Promise((resolve, reject) => {
+		const xhr = new XMLHttpRequest()
+		xhr.open("GET", url)
+		if (headers) {
+		  attachHeaders(xhr, headers)
+		}
+		attachEvents(xhr, resolve, reject)
+		xhr.send()
+	  }
+						)
 	}
-    attachEvents(xhr, resolve, reject)
-    xhr.send()
-  })
-
-}
-
-function setDisplayableLocation(city, state, country) {
-
-    let lolo = [city, state, country].filter((lo) => lo != null)
-    let ty = lolo.join(", ")
-    console.log("You are in " + ty)
-    document.getElementById("location").value = ty
-
-}
-
-function processLocation(obj, zoneProp, cityProp, stateProp, countryProp) {
-
-    if (zoneProp && obj[zoneProp])
-        document.getElementById("zone").value = obj[zoneProp]
-    
-    let country = obj[countryProp], state = obj[stateProp], city = obj[cityProp]
-    
-    if (!country && !state && !city) throw new Error("No country/state/city found")
-    
-    setDisplayableLocation(city, state, country)
-    
-}
-
-window.onload = (event) => {
-    
-    if (platform && platform.description) {
-        document.getElementById("device").value = platform.description
-    }
-
-<#if captureLocation!false>
-
-    genericGET("https://api.ipapi.is", [])
-        .then(result => {
-
-                let obj = JSON.parse(result)
-                if (!obj.location) throw new Error("ipapi - no location object")
-                    
-                processLocation(obj.location, "timezone", "city", "state", "country")   //"countryCode"
-            })
-        .catch(err => {
-                console.log("IPAPI call failed:" + err)
-                
-                genericGET("https://freeipapi.com/api/json/", [])
-                    .then(result => {
-                            let obj = JSON.parse(result)
-                            
-                            processLocation(obj, "timeZone", "cityName", "regionName", "countryName")   //"country_code"
-                    })
-                    .catch(err => console.log("FREEIPAPI call failed:" + err))                
-            }) 
-</#if>
-}
+	function setDisplayableLocation(city, state, country) {
+	  let lolo = [city, state, country].filter((lo) => lo != null)
+	  let ty = lolo.join(", ")
+	  console.log("You are in " + ty)
+	  document.getElementById("location").value = ty
+	}
+	function processLocation(obj, zoneProp, cityProp, stateProp, countryProp) {
+	  if (zoneProp && obj[zoneProp])
+		document.getElementById("zone").value = obj[zoneProp]
+	  let country = obj[countryProp], state = obj[stateProp], city = obj[cityProp]
+	  if (!country && !state && !city) throw new Error("No country/state/city found")
+	  setDisplayableLocation(city, state, country)
+	}
+	window.onload = (event) => {
+	  if (platform && platform.description) {
+		document.getElementById("device").value = platform.description
+	  }
+	  <#if captureLocation!false>
+		genericGET("https://api.ipapi.is", [])
+		.then(result => {
+		let obj = JSON.parse(result)
+		if (!obj.location) throw new Error("ipapi - no location object")
+		processLocation(obj.location, "timezone", "city", "state", "country")   //"countryCode"
+	  }
+			 )
+		.catch(err => {
+		console.log("IPAPI call failed:" + err)
+		genericGET("https://freeipapi.com/api/json/", [])
+		  .then(result => {
+		  let obj = JSON.parse(result)
+		  processLocation(obj, "timeZone", "cityName", "regionName", "countryName")   //"country_code"
+		}
+			   )
+		  .catch(err => console.log("FREEIPAPI call failed:" + err))                
+	  }
+			  ) 
+	</#if>
+	}
   </script>
 </html>
