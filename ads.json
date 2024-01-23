@@ -1,1 +1,18 @@
-{}
+{
+    "agama-smtp": {
+        "projectName": "agama-smtp",
+        "description": "Authentication Technique that rely on sending email",
+        "type": "community",
+        "author": "GluuFederation",
+        "version": "0.0.1",
+        "authorWebsite": "https://github.com/GluuFederation/agama-smtp",
+        "githubUri": "https://github.com/GluuFederation/agama-smtp",
+        "license": "apache-2.0",
+        "lastUpdated": "1705990379826",
+        "tags": [
+            "smtp"
+        ],
+        "noDirectLaunch": [],
+        "configs": {}
+    }
+}
