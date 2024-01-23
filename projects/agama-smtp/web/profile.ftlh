@@ -11,11 +11,8 @@
 	
 	
 	
-	
   
-  [#assign captcha=(recaptcha.enabled!false)]
-	[#if captcha]
-	[/#if]
+  
 	<div class="md:h-screen bg-white relative flex flex-col justify-center items-center">
 	  <div class="md:border md:border-gray-300 bg-white md:shadow-lg shadow-none rounded p-10 align-middle">
 		<div class="flex flex-col items-center space-y-3">
@@ -86,6 +83,9 @@
   
   
   
+  [#assign captcha=(recaptcha.enabled!false)]
+	[#if captcha]
+	[/#if]
   
   
   
