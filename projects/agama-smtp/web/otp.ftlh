@@ -66,12 +66,18 @@
 			  <a href="#" id="resend" name="resend" value="" class="text-sm font-bold text-green-500">Resend code</a>
 			</div>
 			<div class="text-sm flex justify-between items-center">
-			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
+			  <button type="submit" value="Continue" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
 				Next
 			  </button>
 			</div>
 		  </div>
 		</form>
+		<form method="post" class="mb-2" enctype="application/x-www-form-urlencoded">
+		  <div class="d-flex justify-content-center">
+			  Didn't get a message?
+			  <button type="submit" class="btn btn-link p-0 ps-1" id="resend" name="resend" value="">resend code</button>
+		  </div>
+    	</form>
 	  </div>
 	</div>
   
