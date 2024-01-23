@@ -1,2 +1,43 @@
+// Verifies the possession of an e-mail address by sending a random passcode
 Flow org.gluu.agama.smtp.emailVerification
      Basepath ""
+     Inputs email existingAccount context
+// Initialize variables
+obj = {}
+sendMail = true
+// Get instance email service
+emailService = Call org.gluu.agama.smtp.EmailService#getInstance 
+// Iterate x times max
+Repeat 3 times max
+     // When send mail is allowed
+     When sendMail is true
+          // Tun off send mail
+          sendMail = false
+          // Call email service to send mail
+          otpCode = Call emailService sendEmail email context
+          // When OTP code null
+          When otpCode is null
+               // Variable assignment for unsuccessful Email delivery
+               obj = { success: false, error: "Unable to deliver e-mail message" }
+               // Finish flow unsuccessfully
+               Finish obj
+          // Variable assignment after successful email delivery
+          obj.email = email
+          obj.accountExists = existingAccount
+          // Redirect to page asking for OTP received using email
+          obj = RRF "otp.ftlh" obj
+          // If user clicked on "resend code" button
+          When obj.resend is ""
+               // Variable assignment when user clicked on "resend code" button
+               sendMail = true
+               obj.resent = true
+          // When passcode entered by user matches
+          When obj.passcode is otpCode
+               Finish true
+          // Variable assigned when OPT entered by user does not matches
+          obj.matches = false
+          obj.resent = false
+// Variable assignment when user exceeds the number of attempts allowed
+obj = { success: false, error: "You have exceeded the number of attempts allowed" }
+// Finish flow when user exceeds maximum number of flows allowed
+Finish obj
