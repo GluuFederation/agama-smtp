@@ -20,18 +20,18 @@
 			<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png">
 		  </div>
 		  <span class="text-2xl font-semi-bold leading-normal">Enter OTP sent to your Email</span>
-		  &lt;#assign exists = (accountExists!false)&gt;
+		  [#assign exists = (accountExists!false)]
 		  <p class="fs-4 mb-5">
-			&lt;#if exists&gt;
+			[#if exists]
 			<span class="leading-normal">We need to verify it's you</span>
-			&lt;#else&gt;
+			[#else]
 			<span class="leading-normal">No user is currently associated to <span class="i">${email}</span></span>
-			<!--#if-->
+			[/#if]
 		  </p>
-		  &lt;#if resent!false&gt;
+		  [#if resent!false]
 		  We sent you a message again.
-		  &lt;#else&gt;
-		  &lt;#if !exists&gt;
+		  [#else]
+		  [#if !exists]
 		  <div class="inline-flex items-center justify-center w-full">
 			<hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
 			<span class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
@@ -44,14 +44,14 @@
 			  Check your inbox - you'll get a message shortly.
 			</span>
 		  </div>
-		  <!--#if-->
-		  <!--#if-->
+		  [/#if]
+		  [/#if]
 		</div>
-		&lt;#if !(matches!true)&gt;
+		[#if !(matches!true)]
 		<p align="center" class="fs-6 text-danger mb-4">Wrong code entered!
 		</p>
-		<!--#if-->
-		<form method="post" class="my-8" enctype="application/x-www-form-urlencoded">
+		[/#if]
+		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
 		  <input type="hidden" name="location" id="location" value="">
 		  <input type="hidden" name="device" id="device" value="">
 		  <input type="hidden" name="zone" id="zone" value="">
