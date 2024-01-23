@@ -26,7 +26,7 @@
 		</div>
 		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
 		  [#if captcha]
-		    <input type="hidden" name="captcha" id="captcha" value="${captcha}">
+		  <input type="hidden" name="captcha" id="captcha" value="${recaptcha.enable}">
 		  [/#if]
 		  <div class="grid grid-cols-2 gap-2">
 		  </div>
@@ -157,6 +157,23 @@
   </style>
 <script>
   </script><script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script><script>
+        var robot = true
+        if(document.getElementById("captcha").value == true) {
+        function doSubmit() {            
+            if (!robot) {
+                document.forms[0].requestSubmit()
+            }
+        }
+
+        //Apparently this function only gets invoked just once
+        function onSubmit(token) {
+            console.log("Captcha passed")
+            robot = false
+            //Calling clip explicitly won't trigger the form submit... weird :-/
+            setTimeout(doSubmit, 100)
+        }
+		}
+
 	var robot = true
 	function doSubmit() {
 	  if (!robot) {
