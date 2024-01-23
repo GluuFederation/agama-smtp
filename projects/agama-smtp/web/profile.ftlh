@@ -157,23 +157,21 @@
   </style>
 <script>
   </script><script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script><script>
-        var robot = true
-        if(document.getElementById("captcha").value == true) {
-        function doSubmit() {            
-            if (!robot) {
-                document.forms[0].requestSubmit()
-            }
-        }
-
-        //Apparently this function only gets invoked just once
-        function onSubmit(token) {
-            console.log("Captcha passed")
-            robot = false
-            //Calling clip explicitly won't trigger the form submit... weird :-/
-            setTimeout(doSubmit, 100)
-        }
+	var robot = true
+	if(document.getElementById("captcha").value == true) {
+	  function doSubmit() {
+		if (!robot) {
+		  document.forms[0].requestSubmit()
 		}
-
+	  }
+	  //Apparently this function only gets invoked just once
+	  function onSubmit(token) {
+		console.log("Captcha passed")
+		robot = false
+		//Calling clip explicitly won't trigger the form submit... weird :-/
+		setTimeout(doSubmit, 100)
+	  }
+	}
 	var robot = true
 	function doSubmit() {
 	  if (!robot) {
