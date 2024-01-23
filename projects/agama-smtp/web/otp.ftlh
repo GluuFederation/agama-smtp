@@ -62,9 +62,6 @@
 			<input type="text" id="passcode" name="passcode" autofocus="" pattern="[0-9]+" placeholder="******" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
 		  </div>
 		  <div class="space-y-9">
-			<div>
-			  <a href="#" id="resend" name="resend" value="" class="text-sm font-bold text-green-500">Resend code</a>
-			</div>
 			<div class="text-sm flex justify-between items-center">
 			  <button type="submit" value="Continue" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
 				Next
@@ -72,12 +69,12 @@
 			</div>
 		  </div>
 		</form>
-		<form method="post" class="mb-2" enctype="application/x-www-form-urlencoded">
+		<form method="post" enctype="application/x-www-form-urlencoded" class="mb-2">
 		  <div class="d-flex justify-content-center">
-			  Didn't get a message?
-			  <button type="submit" class="btn btn-link p-0 ps-1" id="resend" name="resend" value="">resend code</button>
+			Didn't get a message?
+			<button type="submit" id="resend-2" name="resend" value="" class="text-sm font-bold text-green-500">resend code</button>
 		  </div>
-    	</form>
+		</form>
 	  </div>
 	</div>
   
