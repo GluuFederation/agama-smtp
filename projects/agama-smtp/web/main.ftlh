@@ -1,7 +1,7 @@
 [#ftl output_format="HTML"]
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>2FA
+<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Email Authentication
 	</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" type="text/css"></head>
 <body>
 
@@ -23,7 +23,7 @@
 		  <p class="leading-normal">Enter your Email address
 		  </p>
 		</div>
-		<form method="post" class="my-8" enctype="application/x-www-form-urlencoded">
+		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
 		  <input type="hidden" name="location" id="location" value="">
 		  <input type="hidden" name="device" id="device" value="">
 		  <input type="hidden" name="zone" id="zone" value="">
@@ -36,7 +36,7 @@
 		  <div class="space-y-9">
 			<div class="text-sm flex justify-between items-center">
 			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
-				Next
+				Continue
 			  </button>
 			</div>
 		  </div>
