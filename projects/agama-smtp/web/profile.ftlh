@@ -14,9 +14,6 @@
   
   
 	[#assign captcha=(recaptcha.enabled!false)]
-	[#if captcha]
-	
-	[/#if]
 	<div class="md:h-screen bg-white relative flex flex-col justify-center items-center">
 	  <div class="md:border md:border-gray-300 bg-white md:shadow-lg shadow-none rounded p-10 align-middle">
 		<div class="flex flex-col items-center space-y-3">
@@ -28,6 +25,9 @@
 		  </p>
 		</div>
 		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
+		  [#if captcha]
+		    <input type="hidden" name="captcha" id="captcha" value="${captcha}">
+		  [/#if]
 		  <div class="grid grid-cols-2 gap-2">
 		  </div>
 		  <div id="iyplr">
@@ -84,9 +84,7 @@
 		</form>
 	  </div>
 	</div>
-	[#assign captcha=(recaptcha.enabled!false)]
-	[#if captcha]
-	[/#if]
+  
   
   
   
@@ -158,7 +156,7 @@
 	}
   </style>
 <script>
-    </script><script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script><script>
+  </script><script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script><script>
 	var robot = true
 	function doSubmit() {
 	  if (!robot) {
