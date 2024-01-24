@@ -1,0 +1,39 @@
+// This flow provisions a new user account in the server
+Flow org.gluu.agama.smtp.registration
+     Basepath ""
+     Inputs profile extUid
+// Assign the email obtain from input profile to a variable
+origEmail = profile.email
+// When input email is null
+When origEmail is null
+     // Assign unsuccessful return object 
+     obj = { success: false, error: "No e-mail found in input profile" }
+     // Finish for no e-mail found in input profile 
+     Finish obj
+// Open registration page on UI
+data = RRF "profile.ftlh" profile
+// Variable assignment 
+data.mail = origEmail
+data.uid = origEmail
+// Create Email Service
+emailService = Call org.gluu.agama.smtp.EmailService#getInstance 
+// Assign physical DB attributes to a variable
+keys = [ "uid", "mail", "givenName", "sn", "o", "c", "jansTitle", "jansProfileURL", "role", "displayName" ]
+// Call email service method to register a new user
+inum | E = Call emailService onboardUser data keys extUid
+// If no error
+When E is null
+     // Show user creation log
+     Log "@info User % has been created" inum
+     // Create object with user details after successful creation of user
+     obj = { success: true, data: { inum: inum, uid: data.uid, email: data.mail, name: data.givenName } }
+     // Successful user registration
+     Finish obj
+// Create variable with error message. 
+errorMsgArray = ["An error ocurred while creating the user.", E.message]
+// Construct error message.
+errorMessage = Call java.lang.String#join " " errorMsgArray
+// Create error object to be returned as the flow finishes.
+errorObj = { success: false, error: errorMessage}
+// Finish the flow returning error object.
+Finish errorObj

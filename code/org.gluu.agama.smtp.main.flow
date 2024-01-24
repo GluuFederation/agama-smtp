@@ -1,0 +1,64 @@
+// Authn Techniques that rely on sending email
+Flow org.gluu.agama.smtp.main
+     Basepath ""
+     Timeout 360 seconds
+     Configs conf
+     Inputs emailHint
+// Create and initialize variable to receive email input
+emailObj = { email: emailHint, captureLocation: conf.captureLocation }
+// Retrieve user email address from UI
+uiInput = RRF "main.ftlh" emailObj
+// Assign user email input to a variable
+email = uiInput.email
+// Create an instance Email Service
+emailService = Call org.gluu.agama.smtp.EmailService#getInstance 
+// Get User Details using Email Service
+userData = Call emailService getUserMapUsingEmail email
+// 1. Logic to determine if user email is already registered 2. Initialize location, timezone info from UI to user-data
+emailUnknown = userData.empty
+userData.context = { location: uiInput.location, timeZone: uiInput.zone, device: uiInput.device }
+When emailUnknown is true
+     // Trigger sub-routine to verify email
+     emailVerificationResult = Trigger org.gluu.agama.smtp.emailVerification email false userData.context
+     // If email data is valid
+     When emailVerificationResult.success is true
+          // E-mail verification passed, initiating user provisioning flow
+          Log "@info E-mail verification passed, initiating user provisioning flow"
+          // Create object to register user with email input
+          emailObj = { email: email }
+          // Run sub-routine to register user with email input
+          registrationResult = Trigger org.gluu.agama.smtp.registration emailObj
+          // When user registration is successful
+          When registrationResult.success is true
+               // Assign registered user data to a object attributes
+               userData = registrationResult.data
+               userData.email = email
+               // Show acknowledgement UI page for successful registration
+               acknowledgementInput = RRF "acknowledgement.ftlh" userData
+               // User clicks in continue button
+               When acknowledgementInput.ack is "continue"
+                    // Assign User Id (email) to a variable
+                    uid = userData.uid
+                    // Finish the flow successfully
+                    it_vjcrp = {success:true, data: { userId: uid, uid: uid}}
+                    Finish it_vjcrp
+     // The email verification is not successful
+     Log "@info Email verification is not successful"
+     // Email verification is unsuccessful
+     Finish emailVerificationResult
+// User with same email already exists
+Log "@info User with e-mail % is known" email
+// Run email verification sub-routine
+emailVerificationResult = Trigger org.gluu.agama.smtp.emailVerification email true userData.context
+// When email verification is successful
+When emailVerificationResult.success is true
+     // Assigning user id (email) to a variable
+     uid = userData.uid
+     // Email verification and hence authentication is successful
+     it_vsqpk = {success:true, data: { userId: uid, uid: uid}}
+     Finish it_vsqpk
+// Fail if credential enrollment or authenticator flow failed
+Log "@info Fail if credential enrollment or authenticator flow failed"
+// Credential enrollment or authenticator flow failed
+it_xcqqu = {success:false, error: "Credential enrollment or authenticator flow failed"}
+Finish it_xcqqu
