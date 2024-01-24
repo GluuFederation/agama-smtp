@@ -1,11 +1,5 @@
 # Agama SMTP Project
 
-<!-- These are statistics for this repository-->
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![Apache License][license-shield]][license-url]
-
 Use this project to register and authenticate using the OTP send to the entered Email address.
 
 ## How it works at a glance
@@ -23,6 +17,7 @@ To deploy this project we need to meet the requirements.
 2. Configure the SMTP properties of you auth server.
 
 ![image](https://github.com/duttarnab/agama-smtp/assets/32794267/5b9214b4-f150-41e1-9c82-78be56776770)
+
 
 ### Deployment
 

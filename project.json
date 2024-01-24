@@ -1,18 +1,17 @@
 {
     "projectName": "agama-smtp",
-    "description": "Authentication Technique that rely on sending email",
+    "description": "Agama Project for Authn Techniques that rely on sending email",
     "type": "community",
-    "author": "GluuFederation",
+    "author": "duttarnab",
     "version": "0.0.1",
     "authorWebsite": "https://github.com/GluuFederation/agama-smtp",
     "githubUri": "https://github.com/GluuFederation/agama-smtp",
     "license": "apache-2.0",
-    "lastUpdated": "1705990379826",
+    "lastUpdated": "1706115050127",
     "tags": [
         "smtp"
     ],
     "noDirectLaunch": [
-        "org.gluu.agama.smtp.emailVerification",
         "org.gluu.agama.smtp.registration"
     ],
     "configs": {
@@ -20,8 +19,8 @@
             "minCredsRequired": 2,
             "captureLocation": true
         },
-        "org.gluu.agama.smtp.registration": {},
-        "org.gluu.agama.smtp.emailVerification": {}
+        "org.gluu.agama.smtp.emailVerification": {},
+        "org.gluu.agama.smtp.registration": {}
     },
     "name": "agama-smtp"
 }
