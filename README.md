@@ -1,42 +1,61 @@
+<img src="logo.png" alt="Agama-SMTP logo" style="height: 100px; width:100px;"/>
+
 # Agama SMTP Project
 
-Use this project to register and authenticate using the OTP send to the entered Email address.
+Agama Flows to register and authenticate a person via email.
 
-## How it works at a glance
+## Implementations
 
-When a main flow of this project is launched (namely `org.gluu.agama.smtp.main`) the user's browser is redirected
-to a view where to enter the Email address. The project verifies the Email address and checks if the user with same Email is already registered to the Auth Server. For already registered user it sends OTP to the email address and authentication completes on submitting correct OTP on UI. For non-registered user the project opens a registration page on UI after OTP verification. The user submits details on registration page to register. Finally, the user's browser is redirected to the registered URI.
+* Jans Auth Server
+* Gluu Flex
 
-## Project Deployment
+## Flow: Combined Authn / Registration
 
-To deploy this project we need to meet the requirements.
+The main flow of this project is `org.gluu.agama.smtp.main`. In step one, the
+person enters their email address, to which the IDP sends an OTP code.
+After OTP verification, if the email address is known, the flow is successful.
+If the email address is new, the IDP displays a registration form.
 
 ### Requirements
 
-1. Running instance of Jans Auth Server.
-2. Configure the SMTP properties of you auth server.
-
-![image](https://github.com/duttarnab/agama-smtp/assets/32794267/5b9214b4-f150-41e1-9c82-78be56776770)
-
-
-### Deployment
-
-Download the latest agama-smtp.gama file and deploy it in Auth Sever.
-
-1. Copy (SCP/SFTP) the gama file of this project to a location in your Jans Server.
-2. Connect (SSH) to your Jans Server and open TUI: python3 /opt/jans/jans-cli/jans_cli_tui.py.
-3. Navigate to the Agama tab and then select `Upload project`. Choose the gama file.
-4. Wait for about one minute and then select the row in the table corresponding to this project.
-5. Press `d` and ensure there were not deployment errors.
-6. Pres ESC to close the dialog
+1. A way to send email messages! If you are using Jans Auth Server, it has
+an [SMTP service](https://docs.jans.io/head/admin/config-guide/smtp-configuration/)
+for sending email, which needs to be configured.
 
 ### Testing
 
-1. You'll need an OpenID Connect test RP. You can try 
+1. You'll need an OpenID Connect test RP. You can try
 - [oidcdebugger](https://oidcdebugger.com/)
 - [jans-tarp](https://github.com/JanssenProject/jans/tree/main/demos/jans-tarp)
 - [jans-tent](https://github.com/JanssenProject/jans/tree/main/demos/jans-tent)
 
-2. Trigger the auth flow using `agama_flow=org.gluu.agama.smtp.main` as additional parameter and `acr_values=agama`
+2. Send an [OpenID Authn Request](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest) to your IDP using `acr_values=agama` and `agama_flow=org.gluu.agama.smtp.main`
 
-![agama-smtp](https://github.com/GluuFederation/agama-securitykey/assets/32794267/10c9a2fa-ddce-4d56-a50d-538ea4c66ed1)
+# Core Developers
+
+<table>
+ <tr>
+  <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+    <a href=https://github.com/duttarnab>
+        <img src="https://avatars.githubusercontent.com/u/32794267?v=4" width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Arnab Dutta>
+        <br />
+        <sub style="font-size:14px"><b>Arnab Dutta</b></sub>
+    </a>
+ </tr>
+</table>
+
+# License
+
+This project is provided under the [Apache 2.0 License](https://github.com/GluuFederation/agama-smtp/blob/main/LICENSE)
+
+<!-- This are stats url reference for this repository -->
+[contributors-shield]: https://img.shields.io/github/contributors/GluuFederation/agama-smtp.svg?style=for-the-badge
+[contributors-url]: https://github.com/GluuFederation/agama-smtp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/GluuFederation/agama-smtp.svg?style=for-the-badge
+[forks-url]: https://github.com/GluuFederation/agama-smtp/network/members
+[stars-shield]: https://img.shields.io/github/stars/GluuFederation/agama-smtp?style=for-the-badge
+[stars-url]: https://github.com/GluuFederation/agama-smtp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/GluuFederation/agama-smtp.svg?style=for-the-badge
+[issues-url]: https://github.com/GluuFederation/agama-smtp/issues
+[license-shield]: https://img.shields.io/github/license/GluuFederation/agama-smtp.svg?style=for-the-badge
+[license-url]: https://github.com/GluuFederation/agama-smtp/blob/main/LICENSE
