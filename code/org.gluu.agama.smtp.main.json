@@ -1351,7 +1351,7 @@
 					"hasComment": true,
 					"comment": "Get User Details using Email Service",
 					"javaClassName": "emailService",
-					"javaMethodName": "getUserMapUsingEmail",
+					"javaMethodName": "getUserEntity",
 					"javaVariableName": "emailService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",

@@ -42,11 +42,11 @@ public class JansEmailService extends EmailService {
     {
         if (INSTANCE == null)
             INSTANCE = new JansEmailService();
- 
+
         return INSTANCE;
     }
 
-    public Map<String, String> getUserMapUsingEmail(String email) {
+    public Map<String, String> getUserEntity(String email) {
 
         User user = getUser(MAIL, email);
         boolean local = user != null;
@@ -64,7 +64,7 @@ public class JansEmailService extends EmailService {
                     name = email.substring(0, email.indexOf("@"));
                 }
             }
-            //I need a modifiable map 
+            //I need a modifiable map
             return new HashMap<>(Map.of(UID, uid, INUM_ATTR, inum, "name", name, "email", email));
         }
         return new HashMap<>();

@@ -11,9 +11,9 @@ uiInput = RRF "main.ftlh" emailObj
 // Assign user email input to a variable
 email = uiInput.email
 // Create an instance Email Service
-emailService = Call org.gluu.agama.smtp.EmailService#getInstance 
+emailService = Call org.gluu.agama.smtp.EmailService#getInstance
 // Get User Details using Email Service
-userData = Call emailService getUserMapUsingEmail email
+userData = Call emailService getUserEntity email
 // 1. Logic to determine if user email is already registered 2. Initialize location, timezone info from UI to user-data
 emailUnknown = userData.empty
 userData.context = { location: uiInput.location, timeZone: uiInput.zone, device: uiInput.device }
