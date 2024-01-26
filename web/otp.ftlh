@@ -13,64 +13,68 @@
 	
   
   
-	<div class="md:h-screen bg-white relative flex flex-col justify-center items-center">
+	<div id="content" class="md:h-screen bg-white relative flex flex-col justify-center items-center">
 	  <div class="md:border md:border-gray-300 bg-white md:shadow-lg shadow-none rounded p-10">
 		<div class="flex flex-col items-center space-y-3">
 		  <div class="flex">
 			<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png">
 		  </div>
-		  <span class="text-2xl font-semi-bold leading-normal">OTP Verification</span>
+		  <span data-i18n="otp.otp_verification" class="text-2xl font-semi-bold leading-normal"></span>
 		  [#assign exists = (accountExists!false)]
 		  <p class="fs-4 mb-5">
 			[#if exists]
-			We need to verify it's you 
+			<span data-i18n="otp.need_verification_msg" class="text-red-600"></span>
 			[#else]
-			No user is currently associated to 
-			<span class="i">${email}</span>
+			<span data-i18n="otp.user_not_registered" class="text-red-600"></span>
+			<span class="i text-red-600">${email}</span>
 			[/#if]
 		  </p>
 		  [#if resent!false]
-		  We sent you a message again.
+		  <span data-i18n="otp.otp_resent_msg"></span>
 		  [#else]
 		  [#if !exists]
 		  <div class="inline-flex items-center justify-center w-full">
 			<hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
-			<span class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
-			  Please submit the OTP sent to your Email address.<br> Check your inbox - you'll get a message shortly.
+			<span data-i18n="otp.otp_sent_message_frag1" class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
+			</span>
+			<br>
+			<span data-i18n="otp.otp_sent_message_frag2" class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
 			</span>
 		  </div>
 		  [/#if]
 		  [/#if]
 		</div>
 		[#if !(matches!true)]
-		<p align="center" class="fs-6 text-danger mb-4">Wrong code entered!
+		<p align="center" data-i18n="otp.incorrect_otp_entered" class="fs-6 text-danger mb-4">
 		</p>
 		[/#if]
 		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
 		  <div class="relative mb-2">
-			<label for="code" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
-			  Enter OTP
+			<label for="code" data-i18n="otp.enter_otp" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
 			</label>
 			<input type="text" name="passcode" id="passcode" pattern="[0-9]+" placeholder="000000" autocomplete="off" required="" autofocus="" class="bg-gray-50 w-full rounded px-3 border border-gray-300 pt-2 pb-2 focus:border-green-700">
 		  </div>
 		  <div class="space-y-9">
 			<div class="text-sm flex justify-between items-center">
-			  <button type="submit" value="Continue" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600 button-gradient">
-				Continue
+			  <button type="submit" value="Continue" data-i18n="otp.continue" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600 button-gradient">
 			  </button>
 			</div>
 		  </div>
 		</form>
 		<form method="post" enctype="application/x-www-form-urlencoded" class="mb-2">
 		  <div class="d-flex justify-content-center">
-			Didn't get a message?
-			<button type="submit" id="resend-2" name="resend" value="" class="text-sm font-bold text-green-500">resend code</button>
+			<span data-i18n="otp.email_not_received"></span>
+			<button type="submit" id="resend-2" name="resend" value="" data-i18n="otp.resent_code" class="text-sm font-bold text-green-500">resend code
+			</button>
 		  </div>
 		</form>
 	  </div>
 	</div>
   
+  
+  
+  
 </body>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/2.0.22/i18next.min.js"></script><script src="./locale/loc-i18next.js"></script><script src="./locale/locale.js"></script>
 </html>
