@@ -1,7 +1,7 @@
 [#ftl output_format="HTML"]
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Username Form
+<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Acknowledgement
 	</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" type="text/css"></head>
 <body>
 
@@ -19,7 +19,7 @@
 		  <div class="flex">
 			<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png">
 		  </div>
-		  <span class="text-2xl font-semi-bold leading-normal">Form</span>
+		  <span class="text-2xl font-semi-bold leading-normal">Acknowledgement</span>
 		  <p class="leading-normal">Congratulations ${name}! Your registration with email: ${email} was successful.
 		  </p>
 		  <p class="leading-normal">
