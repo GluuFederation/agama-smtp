@@ -3,11 +3,7 @@
 <html lang="en">
 <head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Acknowledgement
 	</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" type="text/css"></head>
-<body>[#ftl output_format="HTML"]
-
-
-
-
+<body>
 
   
 	
@@ -17,7 +13,7 @@
 	
   
   
-	<div class="md:h-screen bg-white relative flex flex-col justify-center items-center" id="content">
+	<div id="content" class="md:h-screen bg-white relative flex flex-col justify-center items-center">
 	  <div class="md:border md:border-gray-300 bg-white md:shadow-lg shadow-none rounded p-10 align-middle">
 		<div class="flex flex-col items-center space-y-3">
 		  <div class="flex">
@@ -49,9 +45,6 @@
   
   
   
-
-
-
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/2.0.22/i18next.min.js"></script><script src="./locale/loc-i18next.js"></script><script>
