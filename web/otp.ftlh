@@ -31,18 +31,12 @@
 		  </p>
 		  [#if resent!false]
 		  <span data-i18n="otp.otp_resent_msg"></span>
-		  [#else]
-		  [#if !exists]
+		  [/#if]
 		  <div class="inline-flex items-center justify-center w-full">
 			<hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
 			<span data-i18n="otp.otp_sent_message_frag1" class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
 			</span>
-			<br>
-			<span data-i18n="otp.otp_sent_message_frag2" class="absolute px-3 font-medium text-white-900 -translate-x-1-2 bg-white left-1-2 dark:text-white dark:bg-gray-900">
-			</span>
 		  </div>
-		  [/#if]
-		  [/#if]
 		</div>
 		[#if !(matches!true)]
 		<p align="center" data-i18n="otp.incorrect_otp_entered" class="fs-6 text-danger mb-4">
