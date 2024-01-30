@@ -3,7 +3,11 @@
 <html lang="en">
 <head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>OTP Submission Form
 	</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" type="text/css"></head>
-<body>
+<body>[#ftl output_format="HTML"]
+
+
+
+
 
   
 	
@@ -29,8 +33,9 @@
 			<span class="i text-red-600">${email}</span>
 			[/#if]
 		  </p>
-		  [#if resent!false]
-		  <span data-i18n="otp.otp_resent_msg"></span>
+		  [#if resent]
+			<p align="center" data-i18n="otp.otp_resent_msg" class="fs-6 text-red-600 mb-4">
+			</p>
 		  [/#if]
 		  <div class="inline-flex items-center justify-center w-full">
 			<hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
@@ -38,8 +43,8 @@
 			</span>
 		  </div>
 		</div>
-		[#if !(matches!true)]
-		<p align="center" data-i18n="otp.incorrect_otp_entered" class="fs-6 text-danger mb-4">
+		[#if !matches]
+		<p align="center" data-i18n="otp.incorrect_otp_entered" class="fs-6 text-red-600 mb-4">
 		</p>
 		[/#if]
 		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
@@ -68,7 +73,12 @@
   
   
   
+
+
+
+
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/2.0.22/i18next.min.js"></script><script src="./locale/loc-i18next.js"></script><script src="./locale/locale.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/2.0.22/i18next.min.js">
+</script><script src="./locale/loc-i18next.js"></script><script src="./locale/locale.js"></script>
 </html>
