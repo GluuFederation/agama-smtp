@@ -19,18 +19,20 @@
 		  <div class="flex">
 			<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png">
 		  </div>
-		  <span data-i18n="otp.otp_verification" class="text-2xl font-semi-bold leading-normal"></span>
+		  <div id="ix28u" data-i18n="otp.otp_verification" class="text-2xl font-semi-bold leading-normal">
+		  </div>
 		  [#assign exists = (accountExists!false)]
-		  <p class="fs-4 mb-5">
+		  <div id="ipvtc">
 			[#if exists]
 			<span data-i18n="otp.need_verification_msg" class="text-red-600"></span>
 			[#else]
 			<span data-i18n="otp.user_not_registered" class="text-red-600"></span>
 			<span class="i text-red-600">${email}</span>
 			[/#if]
-		  </p>
-		  [#if resent!false]
-		  <span data-i18n="otp.otp_resent_msg"></span>
+		  </div>
+		  [#if resent]
+		  <div id="ioa0o" align="center" data-i18n="otp.otp_resent_msg" class="fs-6 text-red-600 mb-4">
+		  </div>
 		  [/#if]
 		  <div class="inline-flex items-center justify-center w-full">
 			<hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
@@ -38,9 +40,9 @@
 			</span>
 		  </div>
 		</div>
-		[#if !(matches!true)]
-		<p align="center" data-i18n="otp.incorrect_otp_entered" class="fs-6 text-danger mb-4">
-		</p>
+		[#if !matches]
+		<div id="ixi4i" align="center" data-i18n="otp.incorrect_otp_entered" class="fs-6 text-red-600 mb-4">
+		</div>
 		[/#if]
 		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
 		  <div class="relative mb-2">
@@ -70,5 +72,6 @@
   
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/2.0.22/i18next.min.js"></script><script src="./locale/loc-i18next.js"></script><script src="./locale/locale.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/2.0.22/i18next.min.js">
+  </script><script src="./locale/loc-i18next.js"></script><script src="./locale/locale.js"></script>
 </html>

@@ -23,6 +23,10 @@
 		  <p data-i18n="main.enter_email" class="leading-normal">
 		  </p>
 		</div>
+		[#if errorMessage?has_content]
+		<div id="ig86l" class="fs-6 text-red-600 mb-4" align="center">${errorMessage}
+		</div>
+		[/#if]
 		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
 		  <input type="hidden" name="location" id="location" value="">
 		  <input type="hidden" name="device" id="device" value="">
