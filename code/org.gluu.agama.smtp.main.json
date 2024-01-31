@@ -32,7 +32,8 @@
 					"returnVariable": "Credential enrollment or authenticator flow failed",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -72,7 +73,8 @@
 					"logMessage": "\"Fail if credential enrollment or authenticator flow failed\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -117,7 +119,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -165,7 +168,8 @@
 				"handles": [
 					"Agama-when-Node-f53e8a47-c36c-4487-8bd2-d66837b1b4fc.FAILURE",
 					"Agama-when-Node-f53e8a47-c36c-4487-8bd2-d66837b1b4fc.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -179,8 +183,8 @@
 			"height": 124,
 			"id": "finish-e77aeb14-5cb8-46d7-8942-a173da83c957",
 			"position": {
-				"x": 2479,
-				"y": -5.999999999999602
+				"x": 2475,
+				"y": 63.00000000000031
 			},
 			"type": "finish",
 			"data": {
@@ -191,8 +195,8 @@
 				"inRepeatBlock": true,
 				"handles": [],
 				"position": {
-					"x": 2479,
-					"y": -5.999999999999602
+					"x": 2475,
+					"y": 63.00000000000031
 				},
 				"agamaData": {
 					"id": "finish-e77aeb14-5cb8-46d7-8942-a173da83c957",
@@ -206,13 +210,14 @@
 					"returnVariable": "{userId: uid, uid: uid}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2479,
-				"y": -5.999999999999602
+				"x": 2475,
+				"y": 63.00000000000031
 			}
 		},
 		{
@@ -220,8 +225,8 @@
 			"height": 124,
 			"id": "Agama-assignment-Node-fc5e0c63-076c-4538-b3f5-861e46740aaa",
 			"position": {
-				"x": 2279,
-				"y": -5.999999999999602
+				"x": 2277,
+				"y": 64.00000000000031
 			},
 			"type": "assignment",
 			"data": {
@@ -231,8 +236,8 @@
 				"whenCondition": "WhenTrue",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2279,
-					"y": -5.999999999999602
+					"x": 2277,
+					"y": 64.00000000000031
 				},
 				"agamaData": {
 					"id": "Agama-assignment-Node-fc5e0c63-076c-4538-b3f5-861e46740aaa",
@@ -251,13 +256,14 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2279,
-				"y": -5.999999999999602
+				"x": 2277,
+				"y": 64.00000000000031
 			}
 		},
 		{
@@ -301,7 +307,8 @@
 				"handles": [
 					"Agama-when-Node-e619ca76-95bb-4baf-99b0-539e9b8ae623.FAILURE",
 					"Agama-when-Node-e619ca76-95bb-4baf-99b0-539e9b8ae623.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -343,7 +350,8 @@
 					"arguments": "email true userData.context",
 					"asssignedVariableName": "emailVerificationResult",
 					"exceptionVariableField": ""
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -383,7 +391,8 @@
 					"logMessage": "\"User with e-mail % is known\" email",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -397,8 +406,8 @@
 			"height": 124,
 			"id": "Agama-assignment-Node-bf47f92c-efc2-4d45-97a6-e5ca6772c9e2",
 			"position": {
-				"x": 2376,
-				"y": 505.0000000000001
+				"x": 2567.5211239251466,
+				"y": 427.5209998666453
 			},
 			"type": "assignment",
 			"data": {
@@ -408,8 +417,8 @@
 				"whenCondition": "WhenTrue",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2376,
-					"y": 505.0000000000001
+					"x": 2567.5211239251466,
+					"y": 427.5209998666453
 				},
 				"agamaData": {
 					"id": "Agama-assignment-Node-bf47f92c-efc2-4d45-97a6-e5ca6772c9e2",
@@ -428,12 +437,13 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 2376,
-				"y": 505.0000000000001
+				"x": 2567.5211239251466,
+				"y": 427.5209998666453
 			},
 			"dragging": false
 		},
@@ -477,7 +487,8 @@
 				"handles": [
 					"Agama-when-Node-30f1f54c-16e2-4441-9dc6-7098a00bbd5e.FAILURE",
 					"Agama-when-Node-30f1f54c-16e2-4441-9dc6-7098a00bbd5e.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -1370,8 +1381,8 @@
 			"height": 81,
 			"id": "Agama-note-ecf2fe6f-765d-4d6a-b6a2-3e91b59630fc",
 			"position": {
-				"x": 3054.57865528289,
-				"y": 823.0108923035444
+				"x": 3094.6239811945115,
+				"y": 807.3409821642142
 			},
 			"type": "notes",
 			"data": {
@@ -1379,15 +1390,15 @@
 				"type": "Agama-note",
 				"notes": "Show UI with successful user registration message. If the user clicks on continue button then finish the registration flow successfully.",
 				"position": {
-					"x": 3054.57865528289,
-					"y": 823.0108923035444
+					"x": 3094.6239811945115,
+					"y": 807.3409821642142
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
-				"x": 3054.57865528289,
-				"y": 823.0108923035444
+				"x": 3094.6239811945115,
+				"y": 807.3409821642142
 			},
 			"dragging": false
 		},
@@ -1445,27 +1456,27 @@
 		},
 		{
 			"width": 270,
-			"height": 55,
+			"height": 68,
 			"id": "Agama-note-4888adb9-94c1-4e6e-9e6e-e8c82902c87a",
 			"position": {
-				"x": 2230.002823234996,
-				"y": 217.475806234831
+				"x": 2243.931632247734,
+				"y": 227.9224129943845
 			},
 			"type": "notes",
 			"data": {
 				"id": "Agama-note-4888adb9-94c1-4e6e-9e6e-e8c82902c87a",
 				"type": "Agama-note",
-				"notes": "Email OTP verification failed. Authentication is unsuccessful. Finish the flow.",
+				"notes": "Email OTP verification failed. Authentication is unsuccessful. Assign error message to a variable (shown on UI). ",
 				"position": {
-					"x": 2230.002823234996,
-					"y": 217.475806234831
+					"x": 2243.931632247734,
+					"y": 227.9224129943845
 				},
 				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 2230.002823234996,
-				"y": 217.475806234831
+				"x": 2243.931632247734,
+				"y": 227.9224129943845
 			},
 			"dragging": false
 		},
@@ -1474,8 +1485,8 @@
 			"height": 81,
 			"id": "Agama-note-24df480b-c97a-4611-b4ce-d54d068c13d3",
 			"position": {
-				"x": 1808.9999999999993,
-				"y": 342.0000000000001
+				"x": 1739.3559549363097,
+				"y": 368.1165168988838
 			},
 			"type": "notes",
 			"data": {
@@ -1483,41 +1494,41 @@
 				"type": "Agama-note",
 				"notes": "Call sub-routine which sends OTP to the email address and allows user to enter the same OTP on UI. If OTP matches the email verification is successful.",
 				"position": {
-					"x": 1808.9999999999993,
-					"y": 342.0000000000001
+					"x": 1739.3559549363097,
+					"y": 368.1165168988838
 				},
 				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 1808.9999999999993,
-				"y": 342.0000000000001
+				"x": 1739.3559549363097,
+				"y": 368.1165168988838
 			},
 			"dragging": false
 		},
 		{
 			"width": 270,
-			"height": 55,
+			"height": 68,
 			"id": "Agama-note-4460ad57-8273-4683-8b86-a51a9ffbba35",
 			"position": {
-				"x": 2391,
-				"y": -291
+				"x": 2590.9999999999995,
+				"y": -261
 			},
 			"type": "notes",
 			"data": {
 				"id": "Agama-note-4460ad57-8273-4683-8b86-a51a9ffbba35",
 				"type": "Agama-note",
-				"notes": "Email OTP verification failed. Authentication is unsuccessful. Finish the flow.",
+				"notes": "Email OTP verification failed. Authentication is unsuccessful. Assign error message to a variable (shown on UI). ",
 				"position": {
-					"x": 2391,
-					"y": -291
+					"x": 2590.9999999999995,
+					"y": -261
 				},
 				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 2391,
-				"y": -291
+				"x": 2590.9999999999995,
+				"y": -261
 			},
 			"dragging": false
 		},
@@ -1526,8 +1537,8 @@
 			"height": 55,
 			"id": "Agama-note-59c69197-43ef-487e-be24-25c0a288f415",
 			"position": {
-				"x": 2255,
-				"y": 54
+				"x": 2005.0000000000005,
+				"y": -7.999999999999943
 			},
 			"type": "notes",
 			"data": {
@@ -1535,15 +1546,15 @@
 				"type": "Agama-note",
 				"notes": "Email OTP verification successful. Authentication is successful. Finish the flow.",
 				"position": {
-					"x": 2255,
-					"y": 54
+					"x": 2005.0000000000005,
+					"y": -7.999999999999943
 				},
 				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 2255,
-				"y": 54
+				"x": 2005.0000000000005,
+				"y": -7.999999999999943
 			},
 			"dragging": false
 		},
@@ -1566,7 +1577,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 1789,
 				"y": -298.00000000000006
@@ -2334,8 +2345,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1159.867154770509,
-		"y": 492.6352543875739,
-		"zoom": 1.000000000000001
+		"x": -2434.3495819023983,
+		"y": -465.44130366525997,
+		"zoom": 1.1486983549970373
 	}
 }
