@@ -3,11 +3,7 @@
 <html lang="en">
 <head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>OTP Submission Form
 	</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" type="text/css"></head>
-<body>[#ftl output_format="HTML"]
-
-
-
-
+<body>
 
   
 	
@@ -34,8 +30,8 @@
 			[/#if]
 		  </p>
 		  [#if resent]
-			<p align="center" data-i18n="otp.otp_resent_msg" class="fs-6 text-red-600 mb-4">
-			</p>
+		  <div id="ioa0o" align="center" data-i18n="otp.otp_resent_msg" class="fs-6 text-red-600 mb-4">
+		  </div>
 		  [/#if]
 		  <div class="inline-flex items-center justify-center w-full">
 			<hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
@@ -73,12 +69,8 @@
   
   
   
-
-
-
-
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/2.0.22/i18next.min.js">
-</script><script src="./locale/loc-i18next.js"></script><script src="./locale/locale.js"></script>
+  </script><script src="./locale/loc-i18next.js"></script><script src="./locale/locale.js"></script>
 </html>
