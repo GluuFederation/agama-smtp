@@ -24,7 +24,7 @@
 		  </p>
 		</div>
 		[#if errorMessage?has_content]
-		<div id="ig86l" class="fs-6 text-red-600 mb-4">${errorMessage}
+		<div id="ig86l" class="fs-6 text-red-600 mb-4" align="center">${errorMessage}
 		</div>
 		[/#if]
 		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
