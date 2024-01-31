@@ -23,13 +23,13 @@
 		  </div>
 		  [#assign exists = (accountExists!false)]
 		  <div id="ipvtc">
-		  [#if exists]
-		  <span data-i18n="otp.need_verification_msg" class="text-red-600"></span>
-		  [#else]
-		  <span data-i18n="otp.user_not_registered" class="text-red-600"></span>
-		  <span class="i text-red-600">${email}</span>
-		  [/#if]
-		 </div>
+			[#if exists]
+			<span data-i18n="otp.need_verification_msg" class="text-red-600"></span>
+			[#else]
+			<span data-i18n="otp.user_not_registered" class="text-red-600"></span>
+			<span class="i text-red-600">${email}</span>
+			[/#if]
+		  </div>
 		  [#if resent]
 		  <div id="ioa0o" align="center" data-i18n="otp.otp_resent_msg" class="fs-6 text-red-600 mb-4">
 		  </div>
@@ -41,8 +41,8 @@
 		  </div>
 		</div>
 		[#if !matches]
-		<p align="center" data-i18n="otp.incorrect_otp_entered" class="fs-6 text-red-600 mb-4">
-		</p>
+		<div id="ixi4i" align="center" data-i18n="otp.incorrect_otp_entered" class="fs-6 text-red-600 mb-4">
+		</div>
 		[/#if]
 		<form method="post" enctype="application/x-www-form-urlencoded" class="my-8">
 		  <div class="relative mb-2">
