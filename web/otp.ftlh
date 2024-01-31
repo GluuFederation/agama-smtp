@@ -22,14 +22,14 @@
 		  <div id="ix28u" data-i18n="otp.otp_verification" class="text-2xl font-semi-bold leading-normal">
 		  </div>
 		  [#assign exists = (accountExists!false)]
-		  <p class="fs-4 mb-5">
-			[#if exists]
-			<span data-i18n="otp.need_verification_msg" class="text-red-600"></span>
-			[#else]
-			<span data-i18n="otp.user_not_registered" class="text-red-600"></span>
-			<span class="i text-red-600">${email}</span>
-			[/#if]
-		  </p>
+		  <div id="ipvtc">
+		  [#if exists]
+		  <span data-i18n="otp.need_verification_msg" class="text-red-600"></span>
+		  [#else]
+		  <span data-i18n="otp.user_not_registered" class="text-red-600"></span>
+		  <span class="i text-red-600">${email}</span>
+		  [/#if]
+		 </div>
 		  [#if resent]
 		  <div id="ioa0o" align="center" data-i18n="otp.otp_resent_msg" class="fs-6 text-red-600 mb-4">
 		  </div>
