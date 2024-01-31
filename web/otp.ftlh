@@ -19,7 +19,7 @@
 		  <div class="flex">
 			<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png">
 		  </div>
-		  <div id="ix28u" data-i18n="otp.otp_verification" class="text-2xl font-semi-bold leading-normal">
+		  <div id="ix28u" data-i18n="otp.otp_verification" class="text-2xl font-semi-bold leading-normal">OTP
 		  </div>
 		  [#assign exists = (accountExists!false)]
 		  <p class="fs-4 mb-5">
