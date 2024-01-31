@@ -24,3 +24,25 @@ max = Repeat 3 times max
           emailVerificationResult = Trigger org.gluu.agama.smtp.emailVerification email false userData.context
           // Reset error message to empty after email verification
           emailObj.errorMessage = ""
+          // If email data is valid
+          When emailVerificationResult.success is true
+               // E-mail verification passed, initiating user provisioning flow
+               Log "@info E-mail verification passed, initiating user provisioning flow"
+               // Create object to register user with email input
+               emailObj = { email: email }
+               // Run sub-routine to register user with email input
+               registrationResult = Trigger org.gluu.agama.smtp.registration emailObj
+               // When user registration is successful
+               When registrationResult.success is true
+                    // Assign registered user data to a object attributes
+                    userData = registrationResult.data
+                    userData.email = email
+                    // Show acknowledgement UI page for successful registration
+                    acknowledgementInput = RRF "acknowledgement.ftlh" userData
+                    // User clicks in continue button
+                    When acknowledgementInput.ack is "continue"
+                         // Assign User Id (email) to a variable
+                         uid = userData.uid
+                         // Finish the flow successfully
+                         it_zwwlp = {success:true, data: { userId: uid, uid: uid}}
+                         Finish it_zwwlp
