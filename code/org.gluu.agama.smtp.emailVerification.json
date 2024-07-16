@@ -5,8 +5,8 @@
 			"height": 94,
 			"id": "Agama-note-00e459cd-df7a-4b7b-826a-9f333c8f6169",
 			"position": {
-				"x": 2384.5375,
-				"y": 249
+				"x": 2273.870833333333,
+				"y": 309
 			},
 			"type": "notes",
 			"data": {
@@ -14,21 +14,21 @@
 				"type": "Agama-note",
 				"notes": "When user entered OTP does not matches with the OTP sent to the email then start the loop again (if maximum tries count is not reached) to allow user to enter OTP again.",
 				"position": {
-					"x": 2384.5375,
-					"y": 249
+					"x": 2273.870833333333,
+					"y": 309
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
-				"x": 2384.5375,
-				"y": 249
+				"x": 2273.870833333333,
+				"y": 309
 			},
 			"dragging": false
 		},
 		{
 			"width": 270,
-			"height": 68,
+			"height": 55,
 			"id": "Agama-note-6fe18f50-6dd4-45db-a707-e81e1e8ecff0",
 			"position": {
 				"x": 2285,
@@ -135,8 +135,8 @@
 			"height": 68,
 			"id": "Agama-note-6613be5a-b514-458c-ad60-4864b34f468a",
 			"position": {
-				"x": 914,
-				"y": 331
+				"x": 867.3333333333335,
+				"y": 201.66666666666669
 			},
 			"type": "notes",
 			"data": {
@@ -144,15 +144,15 @@
 				"type": "Agama-note",
 				"notes": "When email is allowed to sent, then call email-service to generate an OTP passcode and send to the email address.",
 				"position": {
-					"x": 914,
-					"y": 331
+					"x": 867.3333333333335,
+					"y": 201.66666666666669
 				},
 				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 914,
-				"y": 331
+				"x": 867.3333333333335,
+				"y": 201.66666666666669
 			},
 			"dragging": false
 		},
@@ -275,8 +275,8 @@
 			"height": 124,
 			"id": "Agama-assignment-Node-12aa1d08-8032-4e58-a8d4-173e7ab3da89",
 			"position": {
-				"x": 2780,
-				"y": 381
+				"x": 2761.333333333333,
+				"y": 446.33333333333337
 			},
 			"type": "assignment",
 			"data": {
@@ -286,8 +286,8 @@
 				"whenCondition": "WhenFalse",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2780,
-					"y": 381
+					"x": 2761.333333333333,
+					"y": 446.33333333333337
 				},
 				"agamaData": {
 					"id": "Agama-assignment-Node-12aa1d08-8032-4e58-a8d4-173e7ab3da89",
@@ -314,11 +314,11 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2780,
-				"y": 381
+				"x": 2761.333333333333,
+				"y": 446.33333333333337
 			}
 		},
 		{
@@ -367,12 +367,12 @@
 			}
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-15f282e9-c33a-4ff3-81ee-0342c22af6fd",
 			"position": {
-				"x": 2431,
-				"y": 438
+				"x": 240.33333333333348,
+				"y": -6.000000000000227
 			},
 			"parentId": "Agama-when-Node-c6c0165d-f2d3-4a32-be62-59a35d309eaa",
 			"type": "when",
@@ -383,8 +383,8 @@
 				"whenCondition": "WhenFalse",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2431,
-					"y": 438
+					"x": 240.33333333333348,
+					"y": -6.000000000000227
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-15f282e9-c33a-4ff3-81ee-0342c22af6fd",
@@ -415,8 +415,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2431,
-				"y": 438
+				"x": 2451.999999999999,
+				"y": 501.6666666666664
 			}
 		},
 		{
@@ -663,12 +663,12 @@
 			}
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-4cd5cf1e-4cbd-4b0c-b7ef-df6bd263b731",
 			"position": {
-				"x": 1242,
-				"y": 492
+				"x": 224.66666666666697,
+				"y": 57.33333333333337
 			},
 			"parentId": "Agama-call-Node-6936c66d-92c0-4e4a-8502-bf0360a1d4ae",
 			"type": "when",
@@ -679,8 +679,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 1242,
-					"y": 492
+					"x": 224.66666666666697,
+					"y": 57.33333333333337
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-4cd5cf1e-4cbd-4b0c-b7ef-df6bd263b731",
@@ -712,8 +712,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 1242,
-				"y": 492
+				"x": 1266.666666666667,
+				"y": 549.3333333333334
 			}
 		},
 		{
@@ -812,12 +812,12 @@
 			}
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-20b6dfad-800b-4e04-98f9-fbfb4332ca78",
 			"position": {
-				"x": 729,
-				"y": 262
+				"x": 156.99999999999977,
+				"y": 238
 			},
 			"parentId": "Agama-repeat-Node-7b6b4a01-bbfe-40c0-a2f1-98f61acc8ae4",
 			"type": "when",
@@ -828,8 +828,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 729,
-					"y": 262
+					"x": 156.99999999999977,
+					"y": 238
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-20b6dfad-800b-4e04-98f9-fbfb4332ca78",
@@ -859,8 +859,8 @@
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 729,
-				"y": 262
+				"x": 786.9999999999998,
+				"y": 268
 			},
 			"dragging": false
 		},
@@ -1099,12 +1099,12 @@
 			"dragging": false
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-c6c0165d-f2d3-4a32-be62-59a35d309eaa",
 			"position": {
-				"x": 2150,
-				"y": 438
+				"x": 288.6666666666656,
+				"y": 68.66666666666663
 			},
 			"parentId": "Agama-assignment-Node-c625cba5-70f6-4f0a-852b-134d59d537cd",
 			"type": "when",
@@ -1115,8 +1115,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": "",
 				"position": {
-					"x": 2150,
-					"y": 438
+					"x": 288.6666666666656,
+					"y": 68.66666666666663
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-c6c0165d-f2d3-4a32-be62-59a35d309eaa",
@@ -1151,8 +1151,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2150,
-				"y": 438
+				"x": 2211.6666666666656,
+				"y": 507.66666666666663
 			},
 			"whenCondition": "",
 			"inRepeatBlock": ""
@@ -1493,8 +1493,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1656,
-		"y": -153,
-		"zoom": 1
+		"x": -178.33333333333326,
+		"y": 201,
+		"zoom": 0.5
 	}
 }
