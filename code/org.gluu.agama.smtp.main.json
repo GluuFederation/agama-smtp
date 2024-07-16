@@ -130,12 +130,12 @@
 			"dragging": false
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-f53e8a47-c36c-4487-8bd2-d66837b1b4fc",
 			"position": {
-				"x": 2413,
-				"y": -163.99999999999966
+				"x": 287.66666666666697,
+				"y": -1.3333333333329733
 			},
 			"parentId": "Agama-when-Node-e619ca76-95bb-4baf-99b0-539e9b8ae623",
 			"type": "when",
@@ -146,8 +146,8 @@
 				"whenCondition": "WhenFalse",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2413,
-					"y": -163.99999999999966
+					"x": 287.66666666666697,
+					"y": -1.3333333333329733
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-f53e8a47-c36c-4487-8bd2-d66837b1b4fc",
@@ -174,8 +174,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2413,
-				"y": -163.99999999999966
+				"x": 2460.3333333333335,
+				"y": -103.99999999999892
 			}
 		},
 		{
@@ -267,12 +267,12 @@
 			}
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-e619ca76-95bb-4baf-99b0-539e9b8ae623",
 			"position": {
-				"x": 2163,
-				"y": -163.99999999999966
+				"x": 209.66666666666652,
+				"y": 61.33333333333371
 			},
 			"parentId": "Agama-trigger-Node-062116c9-45e8-4b84-b943-d33e3db16bc2",
 			"type": "when",
@@ -283,8 +283,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2163,
-					"y": -163.99999999999966
+					"x": 209.66666666666652,
+					"y": 61.33333333333371
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-e619ca76-95bb-4baf-99b0-539e9b8ae623",
@@ -313,8 +313,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2163,
-				"y": -163.99999999999966
+				"x": 2172.6666666666665,
+				"y": -102.66666666666595
 			}
 		},
 		{
@@ -406,8 +406,8 @@
 			"height": 124,
 			"id": "Agama-assignment-Node-bf47f92c-efc2-4d45-97a6-e5ca6772c9e2",
 			"position": {
-				"x": 2567.5211239251466,
-				"y": 427.5209998666453
+				"x": 2520.85445725848,
+				"y": 490.1876665333119
 			},
 			"type": "assignment",
 			"data": {
@@ -417,8 +417,8 @@
 				"whenCondition": "WhenTrue",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2567.5211239251466,
-					"y": 427.5209998666453
+					"x": 2520.85445725848,
+					"y": 490.1876665333119
 				},
 				"agamaData": {
 					"id": "Agama-assignment-Node-bf47f92c-efc2-4d45-97a6-e5ca6772c9e2",
@@ -442,18 +442,18 @@
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 2567.5211239251466,
-				"y": 427.5209998666453
+				"x": 2520.85445725848,
+				"y": 490.1876665333119
 			},
 			"dragging": false
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-30f1f54c-16e2-4441-9dc6-7098a00bbd5e",
 			"position": {
-				"x": 2263,
-				"y": 349.0000000000001
+				"x": 249.66666666666652,
+				"y": 3.6666666666667425
 			},
 			"parentId": "Agama-when-Node-c5f132f7-5e11-4e7c-8606-956466325662",
 			"type": "when",
@@ -464,8 +464,8 @@
 				"whenCondition": "WhenFalse",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2263,
-					"y": 349.0000000000001
+					"x": 249.66666666666652,
+					"y": 3.6666666666667425
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-30f1f54c-16e2-4441-9dc6-7098a00bbd5e",
@@ -493,8 +493,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2263,
-				"y": 349.0000000000001
+				"x": 2357.666666666666,
+				"y": 394.33333333333337
 			}
 		},
 		{
@@ -586,12 +586,12 @@
 			}
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-29e59bc2-ad1f-4b29-8560-936d8f988c5e",
 			"position": {
-				"x": 3269,
-				"y": 954
+				"x": 246.599999999999,
+				"y": 55.33333333333326
 			},
 			"parentId": "Agama-rrf-Node-aadc9d35-7833-4185-925e-f554f197702f",
 			"type": "when",
@@ -602,8 +602,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 3269,
-					"y": 954
+					"x": 246.599999999999,
+					"y": 55.33333333333326
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-29e59bc2-ad1f-4b29-8560-936d8f988c5e",
@@ -628,11 +628,11 @@
 				],
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 3269,
-				"y": 954
+				"x": 3315.599999999999,
+				"y": 1009.3333333333333
 			}
 		},
 		{
@@ -730,12 +730,12 @@
 			"dragging": false
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-a1cab9e9-071f-4aab-84a4-583fc115ddde",
 			"position": {
-				"x": 2757,
-				"y": 724
+				"x": 167.66666666666652,
+				"y": 233.33333333333348
 			},
 			"parentId": "Agama-trigger-Node-39fa2313-3459-45b2-8813-53072ef74f21",
 			"type": "when",
@@ -746,8 +746,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2757,
-					"y": 724
+					"x": 167.66666666666652,
+					"y": 233.33333333333348
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-a1cab9e9-071f-4aab-84a4-583fc115ddde",
@@ -775,8 +775,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2757,
-				"y": 724
+				"x": 2724.6666666666665,
+				"y": 957.3333333333335
 			}
 		},
 		{
@@ -912,12 +912,12 @@
 			}
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-c5f132f7-5e11-4e7c-8606-956466325662",
 			"position": {
-				"x": 2044,
-				"y": 494
+				"x": 263.99999999999955,
+				"y": -103.33333333333337
 			},
 			"parentId": "Agama-assignment-Node-69595972-81e8-44bd-a12e-841bc5f0dafc",
 			"type": "when",
@@ -928,8 +928,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2044,
-					"y": 494
+					"x": 263.99999999999955,
+					"y": -103.33333333333337
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-c5f132f7-5e11-4e7c-8606-956466325662",
@@ -958,8 +958,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2044,
-				"y": 494
+				"x": 2107.9999999999995,
+				"y": 390.66666666666663
 			}
 		},
 		{
@@ -1052,12 +1052,12 @@
 			}
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-2493baf6-a7d6-4f7f-ada5-017db9da4f81",
 			"position": {
-				"x": 1531,
-				"y": 264
+				"x": 224.33333333333326,
+				"y": 53.33333333333337
 			},
 			"parentId": "Agama-assignment-Node-459e8300-529f-4716-819f-e1aae035f3ca",
 			"type": "when",
@@ -1068,8 +1068,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 1531,
-					"y": 264
+					"x": 224.33333333333326,
+					"y": 53.33333333333337
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-2493baf6-a7d6-4f7f-ada5-017db9da4f81",
@@ -1095,8 +1095,8 @@
 				"skake": false
 			},
 			"positionAbsolute": {
-				"x": 1531,
-				"y": 264
+				"x": 1555.3333333333333,
+				"y": 317.33333333333337
 			},
 			"selected": false,
 			"dragging": false
@@ -1395,7 +1395,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 3094.6239811945115,
 				"y": 807.3409821642142
@@ -1459,8 +1459,8 @@
 			"height": 68,
 			"id": "Agama-note-4888adb9-94c1-4e6e-9e6e-e8c82902c87a",
 			"position": {
-				"x": 2243.931632247734,
-				"y": 227.9224129943845
+				"x": 2177.264965581067,
+				"y": 270.58907966105113
 			},
 			"type": "notes",
 			"data": {
@@ -1468,15 +1468,15 @@
 				"type": "Agama-note",
 				"notes": "Email OTP verification failed. Authentication is unsuccessful. Assign error message to a variable (shown on UI). ",
 				"position": {
-					"x": 2243.931632247734,
-					"y": 227.9224129943845
+					"x": 2177.264965581067,
+					"y": 270.58907966105113
 				},
 				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 2243.931632247734,
-				"y": 227.9224129943845
+				"x": 2177.264965581067,
+				"y": 270.58907966105113
 			},
 			"dragging": false
 		},
@@ -1511,8 +1511,8 @@
 			"height": 68,
 			"id": "Agama-note-4460ad57-8273-4683-8b86-a51a9ffbba35",
 			"position": {
-				"x": 2590.9999999999995,
-				"y": -261
+				"x": 2636.333333333333,
+				"y": -201
 			},
 			"type": "notes",
 			"data": {
@@ -1520,15 +1520,15 @@
 				"type": "Agama-note",
 				"notes": "Email OTP verification failed. Authentication is unsuccessful. Assign error message to a variable (shown on UI). ",
 				"position": {
-					"x": 2590.9999999999995,
-					"y": -261
+					"x": 2636.333333333333,
+					"y": -201
 				},
 				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 2590.9999999999995,
-				"y": -261
+				"x": 2636.333333333333,
+				"y": -201
 			},
 			"dragging": false
 		},
@@ -2345,8 +2345,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2434.3495819023983,
-		"y": -465.44130366525997,
-		"zoom": 1.1486983549970373
+		"x": -617.1999999999998,
+		"y": 201,
+		"zoom": 0.75
 	}
 }
