@@ -29,10 +29,10 @@ Deployment of an Agama project involves three steps
 
 ### Download the Project
 
- [!TIP]
- Skip this step if you use the Janssen Server TUI tool to 
- configure this project. The TUI tool enables the download and adding of this 
- project directly from the tool, as part of the `community projects` listing. 
+> [!TIP]
+> Skip this step if you use the Janssen Server TUI tool to 
+> configure this project. The TUI tool enables the download and adding of this 
+> project directly from the tool, as part of the `community projects` listing. 
 
 
 The project is bundled as 
@@ -89,14 +89,19 @@ i.e  `agama_org.gluu.agama.smtp.main`.
 
 ## Customize and Make It Your Own
 
-Fork this repo to start customizing the Agama-smtp project. Add custom web 
-assets to change the styling of the web pages to suit your organization's 
-branding guidelines. Or customize the flow code to change the most basic 
-behavior. Agama flow can also be used in conjunction with other Agama 
-projects to create complex authentication journeys. 
+Fork this repo to start customizing the Agama-smtp project. It is possible to 
+customize the user interface provided by the flow to suit your organization's 
+branding 
+guidelines. Or customize the overall flow behavior. Follow the best 
+practices and steps listed 
+[here](https://docs.jans.io/head/admin/developer/agama/agama-best-practices/#project-reuse-and-customizations) 
+to achieve these customizations in the best possible way.
+This  project can be re-used in other Agama projects to create more complex
+ authentication journeys. To re-use, trigger the 
+ [org.gluu.agama.smtp.main](#orggluuagamasmtpmain) flow from other Agama projects.
 
-To make it easier to visualize and customize the Agama Project, 
-use the [Agama Lab](https://cloud.gluu.org/agama-lab/login).
+To make it easier to visualize and customize the Agama Project, use 
+[Agama Lab](https://cloud.gluu.org/agama-lab/login).
 
 
 ## Flows In The Project
@@ -105,7 +110,7 @@ List of the flows:
 
 - [org.gluu.agama.smtp.main](#orggluuagamasmtpmain)
 
-### org.gluu.agama.pw.main
+### org.gluu.agama.smtp.main
 
 The main flow of this project is [org.gluu.agama.smtp.main](./code/org.gluu.agama.smtp.main.flow) .
 In step one, the person enters their email address, to which the IDP sends an OTP code.
