@@ -122,6 +122,71 @@ In step one, the person enters their email address, to which the IDP sends an OT
 After OTP verification, if the email address is known, the flow is successful.
 If the email address is new, the IDP displays a registration form.
 
+
+# Sequence Diagram
+
+A basic diagram to understand how the `agama-SMTP` works.
+
+```mermaid
+sequenceDiagram
+
+title Agama-SMTP Sequence Diagram
+actor User
+participant Browser
+participant jans-auth
+participant SMTP Server
+participant Email Client
+
+User->Browser: Authz url with\n acr_values=agama\n&agama_flow=io.jans.agamaSmtp.main
+Browser->jans-auth: 
+jans-auth->Browser: Submit email form
+User->Browser: Enter and submit email
+Browser->jans-auth: 
+jans-auth->jans-auth: check if user with same\n email already exists
+
+alt user exists - authenticate user
+    jans-auth->jans-auth: Generate OTP
+    jans-auth->jans-auth: Sign OTP email using keys\n in SMTP keystore
+    jans-auth->SMTP Server: Send email
+    SMTP Server->Email Client: Forward email
+    Email Client->User: OTP
+    User->Browser: Enter OTP
+    Browser->jans-auth: Sending OTP (POST form)
+    jans-auth->jans-auth: Validate OTP
+
+    alt OTP correct
+        jans-auth->Browser: Continue with OpenID code flow
+    else OTP incorrect
+        jans-auth->Browser: Ask for OTP until reaching\n the maximum attempts
+        jans-auth->Browser: Terminate the flow with message -\n You have reached max allowed attempts
+    end
+
+else user does not exist - Register new User
+    jans-auth->jans-auth: Generate OTP
+    jans-auth->jans-auth: Sign OTP email using keys\n in SMTP keystore
+    jans-auth->SMTP Server: Send email
+    SMTP Server->Email Client:  
+    Email Client->User: OTP
+    User->Browser: Enter OTP
+    Browser->jans-auth: Sending OTP (POST form)
+    jans-auth->jans-auth: Validate OTP
+
+    alt OTP correct
+        jans-auth->Browser: Display registration form
+        Browser->User: 
+        User->Browser: Submit FN, MN, LN, email, password
+        Browser->jans-auth: POST user details
+        jans-auth->jans-auth: Create user
+        jans-auth->Browser: Continue with OpenID code flow
+    else OTP incorrect
+        jans-auth->Browser: Ask for OTP until reaching\n the maximum attempts
+        jans-auth->Browser: Terminate the flow with message -\n You have reached max allowed attempts
+    end
+end
+
+```
+
+
 # Demo
 
 Check out this video to see the **agama-SMTP** authentication flow in action.
