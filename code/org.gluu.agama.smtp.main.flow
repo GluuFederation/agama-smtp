@@ -44,8 +44,8 @@ max = Repeat 3 times max
                          // Assign User Id (email) to a variable
                          uid = userData.uid
                          // Finish the flow successfully
-                         it_chukg = {success:true, data: { userId: uid, uid: uid}}
-                         Finish it_chukg
+                         it_zxzqx = {success:true, data: { userId: uid, uid: uid}}
+                         Finish it_zxzqx
           // When email verification is invalid
           When emailVerificationResult.success is false
                // Error variable assignment. 
@@ -59,13 +59,13 @@ max = Repeat 3 times max
           // Assigning user id (email) to a variable
           uid = userData.uid
           // Email verification and hence authentication is successful
-          it_nxcao = {success:true, data: {userId: uid, uid: uid}}
-          Finish it_nxcao
+          it_eodsh = {success:true, data: {userId: uid, uid: uid}}
+          Finish it_eodsh
      When emailVerificationResult.success is false
           // Assigning error message to a variable
           emailObj.errorMessage = "Error sending email. Check email address and SMTP configuration."
 // Fail if credential enrollment or authenticator flow failed
 Log "@info Fail if credential enrollment or authenticator flow failed"
 // Credential enrollment or authenticator flow failed
-it_jocsi = {success:false, error: "Credential enrollment or authenticator flow failed"}
-Finish it_jocsi
+it_jiwhq = {success:false, error: "Credential enrollment or authenticator flow failed"}
+Finish it_jiwhq
