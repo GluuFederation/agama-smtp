@@ -3,7 +3,7 @@
     "description": "Agama Project for Authn Techniques that rely on sending email",
     "type": "community",
     "author": "duttarnab",
-    "version": "0.0.4",
+    "version": "1.0.0",
     "authorWebsite": "https://github.com/GluuFederation/agama-smtp",
     "githubUri": "https://github.com/GluuFederation/agama-smtp",
     "license": "apache-2.0",
