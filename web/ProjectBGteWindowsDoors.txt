@@ -1,0 +1,138 @@
+=====================
+MAIN DOOR
+Height: 2m10cm
+Width: 1m60cm
+=====================
+LIVING ROOM WINDOWS
+
+FIRST WINDOW
+-------------
+Height: 1m05cm
+Width: 1m60cm
+
+SECOND WINDOW
+------------
+Height: 1m05cm
+Width: 1m60cm
+
+THIRD WINDOW
+-------------
+Height: 1m05cm
+Width: 1m60cm
+========================
+OFFICE DOOR
+--------------
+Height: 2m10cm
+Width: 95cm
+
+KITCHEN DOOR
+-------------
+Height: 2m10cm
+Width: 95cm
+======================
+OFFICES WINDOWS
+
+FIRST WINDOW
+-------------
+Height: 1m5cm
+Width: 1m15cm
+
+SECOND WINDOW
+------------
+Height: 1m5cm
+Width: 1m15cm
+
+THIRD WINDOW
+-------------
+Height: 1m5cm
+Width: 1m15cm
+====================
+MAIN ROOM DOORS
+FIRST DOOR(DOUCHE)
+-------------
+Height: 2m5cm
+Width: 70cm
+
+SECOND DOOR(ENTRANCE)
+------------
+Height: 2m5cm
+Width: 90cm
+
+THIRD DOOR(VERANDA)
+-------------
+Height: 2m5cm
+Width: 90cm
+=================
+MAIN ROOM WINDOWS
+FIRST WINDOW
+-------------
+Height: 1m
+Width: 1m60cm
+
+SECOND WINDOW(DOUCHE)
+-------------
+Height: 60cm
+Width: 66cm
+====================
+BABY ROOM
+FIRST DOOR(DOUCHE)
+-------------
+Height: 2m10
+Width: 70cm
+
+SECOND DOOR(ENTRANCE)
+------------
+Height: 2m05cm
+Width: 85cm
+
+FIRST WINDOW
+-------------
+Height: 1m
+Width: 70cm
+
+SECOND WINDOW(DOUCHE)
+------------
+Height: 70cm
+Width: 60cm
+=====================
+GUEST ROOM
+FIRST DOOR(ENTRANCE)
+-------------
+Height: 2m05cm
+Width: 90cm
+
+FIRST WINDOW
+-------------
+Height: 1m
+Width: 90cm
+
+SECOND WINDOW(BATH ROOM)
+------------
+Height: 60cm
+Width: 48cm
+=====================
+BALCONY ELEMENTS
+DOOR(ENTRANCE)
+-------------
+Height: 2m5cm
+Width: 70cm
+
+WINDOW
+-------------
+Height: 1m
+Width: 80cm
+
+WINDOWS GRID FOR AERATION
+------------------------
+GRID ONE
+-------------
+Height: 1m
+Width: 2m40
+GRID TWO
+-------------
+Height: 1m
+Width: 2m40
+
+
+
+
